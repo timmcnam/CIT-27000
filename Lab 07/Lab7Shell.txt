@@ -1,0 +1,226 @@
+import java.util.Scanner;
+
+public class Lab7Shell
+{
+	public static void main(String[] args)
+	{
+		// DATA
+		RightTriangle [] triangles = new RightTriangle[10];
+		int nextIDNumber = 1;
+		boolean exit = false;
+		int selection=0;
+		Scanner input = new Scanner(System.in);
+		int id=0;
+		int x=0, y=0;
+		double base=0, height=0;
+		boolean found = false;
+
+		// ALGORITHM
+		// loop until user exits
+		do
+		{
+			// display options
+
+			// get selection (validate)
+
+			// switch on selection
+			switch(selection)
+			{
+			case 1:
+			// get size from user (two variables only, calculate the hypotenuse)
+
+			// get location from user (two variables, X,Y location)
+
+			// set found to false
+
+			// loop through array
+			for (int i = 0; i < triangles.length; i++)
+			{
+				// if this is an empty spot
+				if (triangles[i] == null)
+				{
+ 					// create new RightTriangle object and assign to current array element
+					triangles[i] = new RightTriangle(nextIDNumber++, base, height, x, y);
+
+					// set found to true
+					found = true;
+
+					// break out of loop
+					break;
+				}
+			}
+
+			// if not found, give error message
+
+			// break out of switch statement
+			break;
+
+			case 2:
+			// get id number to delete
+
+			// set found to false
+
+			// loop through array
+			for (int i = 0; i < triangles.length; i++)
+			{
+				// if this is a valid object and the correct object
+				if (triangles[i] != null && triangles[i].GetID() == id)
+				{
+					// delete object
+					triangles[i] = null;
+
+					// set found to true
+
+					// break out of loop
+				}
+			}
+
+			// if not found, give error message
+
+			// break out of switch statement
+
+			case 3:
+			// loop through array
+				// if this is a valid object
+					// delete object
+
+			// break out of switch statement
+			break;
+
+			case 4:
+			// display header
+
+			// loop through array
+				// if this is a valid object
+					// display all info about object. This should call and display all 8 get methods that return information.
+
+			// break out of switch statement
+			break;
+
+			case 5:
+			// get id number to move
+
+			// get location from user (two variables new X,Y location)
+
+			// set found to false
+
+			// loop through array
+				// if this is a valid object and the correct object
+					// call two set methods
+
+					// set found to true
+
+					// break out of loop
+
+			// if not found, give error message
+
+			// break out of switch statement
+			break;
+
+			case 6:
+			// get id number to resize
+
+			// get size from user (two variables)
+
+			// set found to false
+
+			// loop through array
+				// if this is a valid object and the correct object
+					// call SetBaseAndHeight
+
+					// set found to true
+
+					// break out of loop
+
+			// if not found, give error message
+
+			// break out of switch statement
+
+			case 7:
+			// get new scale factor (validate)
+
+			// call SetScaleFactor to set the new scale factor
+
+			// break out of switch statement
+			break;
+
+			case 8:
+			// loop through array
+				// if this is a valid object
+					// call ScaleShape method on object
+
+			// break out of switch statement
+			break;
+
+			case 9:
+			// confirm user wants to exit
+				// set variable to break out of loop
+
+			// break out of switch statement
+			break;
+
+			}
+		// End loop
+		} while (!exit);
+	}
+}
+
+class RightTriangle
+{
+	// with three instance variables of type double called base, height, and hypotenuse.
+	private double base;
+	private double height;
+	private double hypotenuse;
+
+	// add three new instance variables
+
+	// add static scaleShape
+
+	// update constructor to take the new instance variables
+	public RightTriangle(int i, double b, double h, int x, int y)
+	{
+		SetBaseAndHeight(b, h);
+		// set the other instance variables
+	}
+
+	// a single set method which takes new values for base and height and calculates the hypotenuse,
+	public void SetBaseAndHeight(double b , double h)
+	{
+		if (b > 0.0 && h > 0.0)
+		{
+			base = b;
+			height = h;
+			hypotenuse = Math.sqrt(base * base + height * height);
+		}
+	}
+
+	// add set methods for the three new instance variables
+
+	// get methods for all three instance variables
+	public double GetBase()
+	{
+		return base;
+	}
+	public double GetHeight()
+	{
+		return height;
+	}
+	public double GetHypotenuse()
+	{
+		return hypotenuse;
+	}
+
+	// add get methods for the three new instance variables
+
+	// and methods getArea and getPerimeter.
+	public double GetArea()
+	{
+		return 0.5 * base * height;
+	}
+	public double GetPerimeter()
+	{
+		return base + height + hypotenuse;
+	}
+
+	// add ScaleShape method
+}

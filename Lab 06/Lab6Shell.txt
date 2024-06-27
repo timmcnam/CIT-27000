@@ -1,0 +1,97 @@
+import java.util.Scanner;
+public class Lab6Shell
+{
+	public static void main(String args[])
+	{
+		// variables
+		Scanner input = new Scanner(System.in);
+		char[][] board = new char[7][8];
+		boolean finished = false;
+		boolean gameOver = false;
+		char currentPlayer = 'X';
+		int numMoves = 0;
+
+		// loop until user wants to stop
+		do
+		{
+			// init game board
+
+			// initialize variables
+
+			// display the board
+			DisplayBoard(board);
+
+			// loop until this game is over
+			do
+			{
+				// get the next move for the current player
+				int columnChosen = 0;
+				do
+				{
+					System.out.println("Enter the column you want to place your piece.");
+					columnChosen = input.nextInt();
+
+				} while (columnChosen < 1 || columnChosen > 7 || board[1][columnChosen] != ' ');
+
+				// place piece
+
+				// increment number of moves
+
+				// display the board
+				DisplayBoard(board);
+
+				// check for win
+				if (CheckForWin(board))
+				{
+					// if winner, display congratulations and set gameOver true
+				}
+				else if (numMoves == 42)
+				{
+					// if tie, display result and set gameOver true
+				}
+				else
+				{
+					// switch current player
+				}
+
+			} while (!gameOver);
+
+			// ask if user wants to play again, set finished accordingly
+
+		} while (!finished);
+	}
+
+	// this method displays the board passed in
+	public static void DisplayBoard(char[][] board)
+	{
+	}
+
+	// this method determines if a game has been won
+	public static boolean CheckForWin(char[][] board)
+	{
+		// check for horizontal
+		for (int r = 1; r <= 6; r++)
+		{
+			for (int c = 1; c <= 4; c++)
+			{
+				if (board[r][c] == board[r][c+1] &&
+				    board[r][c] == board[r][c+2] &&
+				    board[r][c] == board[r][c+3] &&
+				    board[r][c] != ' ')
+				    {
+						return true;
+					}
+			}
+		}
+
+		// check for vertical
+
+		// check for diagonal up
+
+		// check for diagonal down
+
+		return false;
+
+	}
+
+}

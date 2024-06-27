@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Lab4Shell
+{
+	public static void main(String[] args)
+	{
+		// declare and create variables
+		int probType, level;
+		int op1=0, op2=0, op3=0, correctAnswer=0, studentAnswer;
+		int numCorrect;
+		Random random = new Random();
+		Scanner input = new Scanner(System.in);
+		boolean playAgain = true;
+
+		// loop until student wants to end game
+		do
+		{
+			// get problem Type
+
+			// get level
+
+			// initialize numCorrect to 0
+
+			// loop 10 times
+			for (int i = 1; i <= 10; i++)
+			{
+				// generate problem
+				switch (level)
+				{
+				}
+
+				// display problem and calculate the correct answer
+				switch (probType)
+				{
+				}
+
+				// get student answer
+
+				// check answer, give feedback, update numCorrect
+
+			}
+
+			// display number correct
+
+			// ask if user wants to play again
+
+		} while (playAgain);
+	}
+}

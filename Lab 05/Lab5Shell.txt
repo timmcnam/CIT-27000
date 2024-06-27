@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+// Then create a test application
+public class Lab5Shell
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+
+		//  which queries the user for the needed data to create two Circle objects
+		Circle c1, c2;
+
+		//  and two RightTriangle objects.
+		RightTriangle r1, r2;
+
+		// It will then display all information about the four objects.
+
+		// It should then display which Circle object has the largest area
+
+		// and which RightTriangle object has the largest area.
+	}
+}
+
+//Create a class Circle
+class Circle
+{
+	// with one instance variable of type double called radius
+
+	// Then define an appropriate constructor that takes an initial value for the radius
+
+	// get and set methods for the radius
+
+	// and methods getArea and getPerimeter.
+}
+
+//Create a class RightTriangle
+class RightTriangle
+{
+	// with three instance variables of type double called base, height, and hypotenuse.
+
+	// Then define an appropriate constructor which takes initial values for the base and height and calculates the hypotenuse,
+
+	// a single set method which takes new values for base and height and calculates the hypotenuse,
+
+	// get methods for all three instance variables
+
+	// and methods getArea and getPerimeter.
+}

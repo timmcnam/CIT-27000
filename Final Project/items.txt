@@ -1,0 +1,4 @@
+
+0 pen 1.0 500
+1 notebook 3.0 400
+2,mechanical pencil,2.0,150

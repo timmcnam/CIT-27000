@@ -1,0 +1,3 @@
+ sharePrice = (Number_of_shares * Purchase_price ) - (Number_of_shares * Sale_price ) ;
+ commissionTotal = (Number_of_shares * Purchase_price * Purchase_commission )+ (Number_of_shares * Sale_price * Sale_commission );
+ net_Price = commissionTotal + sharePrice ;
