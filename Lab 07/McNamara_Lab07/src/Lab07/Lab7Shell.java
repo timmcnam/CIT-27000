@@ -32,16 +32,17 @@ public class Lab7Shell {
         // loop until user exits
         do {
             // display options
-            System.out.println("Please select from the following options. "
-            		+ "\n 1 <–> Enter a new right triangle"
-            		+ "\n 2 <–> Delete a right triangle"
-            		+ "\n 3 <–> Delete all right triangles"
-            		+ "\n 4 <–> Display all right triangles"
-            		+ "\n 5 <–> Move a triangle"
-            		+ "\n 6 <–> Resize a triangle"
-            		+ "\n 7 <–> Enter a scale factor"
-            		+ "\n 8 <–> Scale all triangles"
-            		+ "\n 9 <–> Exit program");
+            System.out.println("""
+                               Please select from the following options. 
+                                1 <\u2013> Enter a new right triangle
+                                2 <\u2013> Delete a right triangle
+                                3 <\u2013> Delete all right triangles
+                                4 <\u2013> Display all right triangles
+                                5 <\u2013> Move a triangle
+                                6 <\u2013> Resize a triangle
+                                7 <\u2013> Enter a scale factor
+                                8 <\u2013> Scale all triangles
+                                9 <\u2013> Exit program""");
            
             
 
